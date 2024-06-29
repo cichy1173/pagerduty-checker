@@ -6,4 +6,4 @@ services:
       - HOME_ASSISTANT_URL=""
       - SLEEP_TIME=45
     container_name: pagerduty-checker
-    image: pagerduty-checker
+    image: pagerduty-checker:latest
