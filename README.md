@@ -22,5 +22,6 @@ services:
       - HOME_ASSISTANT_URL=""
       - SLEEP_TIME=45
     container_name: pagerduty-checker
-    image: pagerduty-checker:latest
+    restart: unless-stopped
+    image: ghcr.io/cichy1173/pagerduty_checker:latest
 ```
