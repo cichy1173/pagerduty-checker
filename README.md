@@ -18,9 +18,9 @@ version: "3.3"
 services:
   pagerduty-checker:
     environment:
-      - API_KEY=""
-      - HOME_ASSISTANT_URL=""
-      - SLEEP_TIME=45
+      - API_KEY="<pagerduty_api_key>"
+      - HOME_ASSISTANT_URL=<home_assistant_webhook_url>
+      - SLEEP_TIME=2
     container_name: pagerduty-checker
     restart: unless-stopped
     image: ghcr.io/cichy1173/pagerduty_checker:latest
