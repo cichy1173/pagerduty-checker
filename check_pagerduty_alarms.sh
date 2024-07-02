@@ -10,7 +10,7 @@ fi
 while true; do
   # Check triggered alarms
   INCIDENTS=$(curl -s -H "Authorization: Token token=$API_KEY" -H "Accept: application/vnd.pagerduty+json;version=2" \
-    "https://api.pagerduty.com/incidents?statuses[]=triggered" | jq -r '.incidents')
+    "https://api.pagerduty.com/incidents?statuses[]=triggered&user_ids[]=$USER_ID" | jq -r '.incidents')
 
   if [ "$INCIDENTS" == "[]" ]; then
     echo "You do not have any triggered alarms"
