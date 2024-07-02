@@ -8,6 +8,7 @@ This script checks if you have any triggered alarms. If yes this information is 
 2. Set ENV const:
     - `API_KEY` is PagerDuty API key tied to your account
     - `HOME_ASSISTANT_URL` is Home Assistant Webhook URL that can trigger an automation
+    - `USER_ID` user id that can be found on address bar
     - `SLEEP_TIME` means how often script will refresh. It shouldn't be less than 15/20 seconds. 
 
 
