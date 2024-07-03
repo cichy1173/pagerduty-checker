@@ -19,9 +19,9 @@ version: "3.3"
 services:
   pagerduty-checker:
     environment:
-      - API_KEY=<pagerduty_api_key>
+      - API_KEY="<pagerduty_api_key>"
       - HOME_ASSISTANT_URL=<home_assistant_webhook_url>
-      - USER_ID="<user_id>"
+      - USER_ID=<user_id>
       - SLEEP_TIME=2
     container_name: pagerduty-checker
     restart: unless-stopped
