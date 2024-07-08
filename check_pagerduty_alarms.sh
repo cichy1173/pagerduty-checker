@@ -19,7 +19,7 @@ while true; do
     INCIDENT_DETAILS=$(echo "$INCIDENTS" | jq -r '.[] | "\(.id): \(.summary)"')
     echo "$INCIDENT_DETAILS"
     # Send alarm info to Home Assistant
-    curl -X POST -H "Content-Type: application/json" -d '{"incident_details": "ALARM"}' "$HOME_ASSISTANT_URL"
+    curl -X POST -H "Content-Type: application/json" -d '{"incident_details": "$INCIDENT_DETAILS"}' "$HOME_ASSISTANT_URL"
   fi
 
   # Wait for next scan

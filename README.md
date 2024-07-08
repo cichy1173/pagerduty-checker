@@ -1,4 +1,4 @@
-# Pagerduty triggered alarm checker
+# Pagerduty-checker
 
 This script checks if you have any triggered alarms. If yes this information is sent to Home Assistant Webhook. 
 
